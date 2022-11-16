@@ -1,0 +1,18 @@
+type Query {
+    movies: [Movie]
+}
+
+interface Movie {
+    title: String
+}
+
+type ScaryMovie implements Movie {
+    title: String
+    gory: Boolean
+    scareFactor: Int
+}
+
+type ActionMovie implements Movie {
+    title: String
+    nrOfExplosions: Int
+}
